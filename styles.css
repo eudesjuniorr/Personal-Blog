@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 :root {
     --cor-fundo: #f4f4f4;
@@ -13,7 +18,7 @@ body {
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 4rem 2rem 2rem 2rem; /* top right bottom left */
 }
 
 h1, h2, h3 {
@@ -21,7 +26,7 @@ h1, h2, h3 {
     margin-bottom: 1rem;
 }
 
-a, header {
+a {
     color: var(--cor-destaque);
     text-decoration: none;
     transition: color 0.3s ease;
@@ -45,13 +50,68 @@ a:hover {
     transform: scale(1.02);
 }
 
-.navbar {
+/* .navbar {
     background: var(--cor-fundo);
     color: white;
     padding: 1rem 0 1rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+} */ 
+
+.site-header {
+    position: fixed;
+    padding: 0.5rem 0 0.5rem 0;
+    top: 0;
+    width: 800px;
+    background: var(--cor-fundo);
+    z-index: 1000;
+    background: transparent;
+}
+
+.header-blur-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 100%;
+    margin-left: -25%;
+    background: rgba(244, 244, 244, 0.3);
+    backdrop-filter: blur(3px); /* adjust the blur */
+    z-index: -1; /* behind the header */
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 -4rem;
+}
+
+.logo-image {
+    max-height: 40px; /* adjust the width and height of image */
+    width: auto; /* keep proportion */
+}
+
+.header-content {
+    display: flex;
+    padding: 0 4rem;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1; /* on top of the blur */
+}
+
+.header-menu a {
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.hidden-menu {
+    display: none;
+}
+
+.hidden-menu a {
+    margin-left: 20px;
+    margin-right: 0;
 }
 
 footer {
@@ -59,6 +119,30 @@ footer {
     margin-top: 2rem;
     color: #9b9898;
 }
+
 .a-footer:hover {
-    color: var(--cor-destaque);
+    color: var(--cor-texto);
 }
+
+.registered-trademark {
+    font-size: 1.1em; 
+    vertical-align: middle; /* Vertical Aligned */
+    margin-left: 1px; /* Adiciona um pequeno espaço */
+}
+
+/* @media screen and (max-width: 778px) {
+    .header-menu {
+        display: none;
+    }
+    .hidden-menu {
+        display: flex;
+    }
+    .header-content {
+        margin: auto;
+        justify-content: center;
+    }
+    .header-logo {
+        display: flex;
+        justify-content: left;
+    }
+} */ /* Mobile First */
