@@ -116,8 +116,9 @@ a:hover {
 
 footer {
     text-align: center;
+    font-size: smaller;
     margin-top: 2rem;
-    color: #9b9898;
+    color: var(--cor-texto);
 }
 
 .registered-trademark {
