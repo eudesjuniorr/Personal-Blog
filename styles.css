@@ -4,10 +4,17 @@
     padding: 0;
 }
 
-:root {
+/* :root {
     --cor-fundo: #f4f4f4;
     --cor-texto: #333;
     --cor-destaque: #4a90e2;
+    --fonte-principal: 'Inter', sans-serif;
+} */
+
+:root {
+    --cor-fundo: #0a0a0a;
+    --cor-texto: #e8e8e8;
+    --cor-destaque: #047af1;
     --fonte-principal: 'Inter', sans-serif;
 }
 
@@ -27,14 +34,14 @@ h1, h2, h3 {
 }
 
 a {
-    color: var(--cor-destaque);
+    color: var(--cor-fundo);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
     color: darken(var(--cor-destaque), 10%);
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .card {
@@ -76,7 +83,7 @@ a:hover {
     width: 150%;
     height: 100%;
     margin-left: -25%;
-    background: rgba(244, 244, 244, 0.8);
+    background: rgba(244, 244, 244, 0.7);
     backdrop-filter: blur(20px); /* adjust the blur */
     z-index: -1; /* behind the header */
 }
@@ -126,10 +133,12 @@ footer {
     vertical-align: middle; /* Vertical Aligned */
     margin-left: 1px; /* Adiciona um pequeno espaço */
 }
+
 @media screen and (max-width: 778px) {
     .header-menu {
         display: none;
     }
+
     .hidden-menu {
         display: flex;
         flex-direction: column;
@@ -150,14 +159,14 @@ footer {
         cursor: pointer;
         padding: 5px;
         background-color: transparent;
-        color: var(--cor-destaque);
+        color: var(--cor-fundo);
     }
 
     .dropdown-menu {
         display: none;
         width: 80%;
         max-width: 150px;
-        background: rgba(244, 244, 244, 0.9);
+        background: rgba(244, 244, 244, 0.8);
         backdrop-filter: blur(50px);
         border-radius: 8px;
         margin-top: 10px;
@@ -169,7 +178,7 @@ footer {
         padding-top: 10px;
         margin-left: -2px;
         text-align: center;
-        color: var(--cor-destaque);
+        color: var(--cor-fundo);
         transition: background-color 0.3s ease;
     }
 
