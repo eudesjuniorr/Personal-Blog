@@ -102,15 +102,6 @@ a:hover {
     transform: scale(1.02);
 }
 
-/* .navbar {
-    background: var(--cor-fundo);
-    color: white;
-    padding: 1rem 0 1rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-} */ 
-
 .site-header {
     position: fixed;
     padding: 0.3rem 0 1px 0;
@@ -181,7 +172,7 @@ footer {
 .registered-trademark {
     font-size: 1.1em;
     vertical-align: middle; /* Vertical Aligned */
-    margin-left: 1px; /* Adiciona um pequeno espaço */
+    margin-left: 1px;
 }
 
 @media screen and (max-width: 778px) {
