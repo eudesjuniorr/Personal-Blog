@@ -33,15 +33,59 @@ h1, h2, h3 {
     margin-bottom: 1rem;
 }
 
+p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    hyphens: auto;
+}
+
 a {
     color: var(--cor-fundo);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
+hr { /* Horizontal Line */
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid var(--cor-texto);
+    margin: 1em 0;
+    padding: 0;
+}
+
+ul {
+    padding-left: 5vw;
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+
+i {
+    font-weight: 100;
+    font-size: small;
+    opacity: 0.7;
+    transition: color 0.3s ease;
+}
+
 a:hover {
-    color: darken(var(--cor-destaque), 10%);
-    opacity: 0.9;
+    opacity: 0.7;
+}
+
+#first-title {
+    text-align: center;
+}
+
+#junior {
+    color: var(--cor-texto);
+}
+
+#suggestion {
+    color: var(--cor-destaque);
+}
+
+.logo-image:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
 
 .card {
@@ -71,19 +115,22 @@ a:hover {
     position: fixed;
     padding: 0.3rem 0 1px 0;
     top: 0;
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
+    left: 50%;
+    transform: translateX(-50%);
     background: var(--cor-fundo);
     z-index: 1000;
     background: transparent;
 }
 
 .header-blur-background {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 150%;
-    height: 100%;
-    margin-left: -25%;
+    width: 100vw;
+    height: 50px;
+    margin-left: calc(-50vw + 50%);
     background: rgba(244, 244, 244, 0.7);
     backdrop-filter: blur(20px); /* adjust the blur */
     z-index: -1; /* behind the header */
@@ -98,14 +145,16 @@ a:hover {
 .logo-image {
     max-height: 40px; /* adjust the width and height of image */
     width: auto; /* keep proportion */
+    transition: transform 0.3s ease;
 }
 
 .header-content {
     display: flex;
-    padding: 0 4rem;
+    position: relative;
+    padding: 0 0 0 5rem;
     justify-content: space-between;
     align-items: center;
-    z-index: 1; /* on top of the blur */
+    z-index: 2; /* on top of the blur */
 }
 
 .header-menu a {
@@ -130,7 +179,7 @@ footer {
 }
 
 .registered-trademark {
-    font-size: 1.1em; 
+    font-size: 1.1em;
     vertical-align: middle; /* Vertical Aligned */
     margin-left: 1px; /* Adiciona um pequeno espaço */
 }
@@ -176,7 +225,7 @@ footer {
 
     .dropdown-menu a {
         display: block;
-        padding-top: 10px;
+        padding: 5px 0;
         margin-left: -2px;
         text-align: center;
         color: var(--cor-fundo);
@@ -184,7 +233,7 @@ footer {
     }
 
     .dropdown-menu a:hover {
-        background-color: #f0f0f0;
+        background-color: var(--cor-texto);
     }
 
     .dropdown-toggle:checked ~ .dropdown-menu {
