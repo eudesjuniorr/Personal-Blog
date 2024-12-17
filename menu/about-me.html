@@ -3,31 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About me</title>
+    <title>Personal Tech Blog</title>
     <link rel="stylesheet" href="/styling/styles.css">
+    <script> // fuction to load HTML files
+        function loadHTML(file, elementId) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => document.getElementById(elementId).innerHTML = data)
+                .catch(err => console.error('Error loading file:', err));
+            }
+    </script>
 </head>
 <body>
-    <header class="site-header">
-        <div class="header-blur-background"></div>
-        <div class="header-content">
-            <div class="header-logo">
-                <a href="/" class="a-logo"><img src="/images/logo-without-background.png" alt="Website Logo" class="logo-image"></a>
-            </div>
-            <nav class="header-menu">
-                <a href="/menu/about-me.html">About me</a>
-                <a href="maintenance.html">Articles</a>
-            </nav>
-            <div class="hidden-menu">
-                <input type="checkbox" id="mobile-menu-toggle" class="dropdown-toggle">
-                <label for="mobile-menu-toggle" class="dropdown-label">Menu ☰</label>
-                <div class="dropdown-menu">
-                    <a href="/">Home</a>
-                    <a href="/menu/about-me.html">About me</a>
-                    <a href="maintenance.html">Articles</a>
-                </div>
-            </div>
-        </div>
-    </header>
+    <div id="menu"></div>
     <div class="main-content">
         <h1 id="first-title">About Me 🙋🏻‍♂️</h1>
 
@@ -63,15 +51,11 @@
             <li>🔗 GitHub: <a href="https://github.com/eudesjuniorr" id="suggestion">@eudesjuniorr</a></li>
         </ul>
     </div>
-    <footer>&copy; 2024 Jr. All rights reserved.</footer>
-    <!-- Scroll to top button -->
-    <a href="#" class="scroll-to-top">
-        <div class="arrow-up"></div>
-    </a>
-    <!-- Scroll to top button -->
-    <!-- ----- -->
-    <!-- JavaScript -->
+    <div id="footer"></div>
     <script src="/styling/script.js"></script>
-    <!-- JavaScript -->
+    <script> // load HTML files
+        loadHTML('/basic structure/menu.html', 'menu');
+        loadHTML('/basic structure/footer.html', 'footer');
+    </script>
 </body>
 </html>
