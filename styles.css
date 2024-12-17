@@ -39,11 +39,20 @@ p {
     hyphens: auto;
 }
 
-a {
+a:not(.a-logo) {
     color: var(--cor-fundo);
     text-decoration: none;
     transition: color 0.3s ease;
 }
+
+a:hover:not(.a-logo) {
+    opacity: 0.7;
+}
+
+/* .a-logo {
+    all: unset;
+    cursor: pointer;
+} */
 
 hr { /* Horizontal Line */
     display: block;
@@ -65,10 +74,6 @@ i {
     font-size: small;
     opacity: 0.7;
     transition: color 0.3s ease;
-}
-
-a:hover {
-    opacity: 0.7;
 }
 
 #first-title {
@@ -169,6 +174,36 @@ footer {
     color: var(--cor-texto);
 }
 
+.scroll-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--cor-destaque);
+    border-radius: 50%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    opacity: 1;
+}
+
+.arrow-up {
+    margin-top: 5px;
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid var(--cor-fundo);
+    border-right: 2px solid var(--cor-fundo);
+    transform: rotate(-45deg);
+}
+
 .registered-trademark {
     font-size: 1.1em;
     vertical-align: middle; /* Vertical Aligned */
@@ -229,5 +264,20 @@ footer {
 
     .dropdown-toggle:checked ~ .dropdown-menu {
         display: block;
+    }
+}
+
+/* Show the top button */
+@media screen and (min-width: 300px) {
+    .scroll-to-top {
+        display: none;
+    }
+
+    .scroll-to-top.show {
+        display: flex;
+    }
+
+    html {
+        scroll-behavior: smooth;
     }
 }
