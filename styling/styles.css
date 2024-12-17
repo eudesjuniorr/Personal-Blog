@@ -246,7 +246,7 @@ footer {
     }
     .img-about {
         margin-bottom: 20px;
-        width: 40%;
+        width: 80%;
         transition: transform 0.3s ease;
     }
     .img-about:hover {
