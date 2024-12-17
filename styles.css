@@ -210,7 +210,7 @@ footer {
     margin-left: 1px;
 }
 
-@media screen and (max-width: 778px) {
+@media screen and (max-width: 830px) {
     .header-menu {
         display: none;
     }
@@ -268,7 +268,7 @@ footer {
 }
 
 /* Show the top button */
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 200px) {
     .scroll-to-top {
         display: none;
     }
