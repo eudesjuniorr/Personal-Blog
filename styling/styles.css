@@ -210,6 +210,14 @@ footer {
     margin-left: 1px;
 }
 
+/* Reservation space for About me stylling (if needed) */
+
+/* -------------------------------------------- */
+
+/* Reservation space for Articles stylling (if needed) */
+
+/* -------------------------------------------- */
+
 @media screen and (max-width: 830px) {
     .header-menu {
         display: none;
