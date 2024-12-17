@@ -16,6 +16,7 @@
     --cor-texto: #e8e8e8;
     --cor-destaque: #047af1;
     --fonte-principal: 'Inter', sans-serif;
+    --transition: 0.3s ease;
 }
 
 body {
@@ -211,6 +212,50 @@ footer {
 }
 
 /* Reservation space for About me stylling (if needed) */
+
+.img-card {
+    display: flex;
+    align-items: center;
+}
+
+.p-about {
+    width: 65%;
+    margin-left: auto;
+}
+
+.img-about {
+    border: 1px solid var(--cor-texto);
+    width: 30%;
+    transition: var(--transition);
+}
+
+.img-about:hover {
+    transform: scale(1.05);
+}
+
+.p-about:hover {
+    transform: none;
+    transition: none;
+}
+
+
+@media screen and (max-width: 722px) {
+    .img-card {
+        flex-direction: column;
+        align-items: center;
+    }
+    .img-about {
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+    }
+    .img-about:hover {
+        transform: scale(1.05);
+    }
+    .p-about {
+        width: 100%;
+    }
+    
+}
 
 /* -------------------------------------------- */
 
