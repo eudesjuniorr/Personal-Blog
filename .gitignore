@@ -1,0 +1,56 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build output
+dist/
+build/
+.cache/
+public/dist/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# Temporary files
+tmp/
+temp/
+.temp/
+
+# System Files
+.DS_Store
+desktop.ini
+
+# Only ignore generated files in public
+public/dist/
+public/*.html
+public/sitemap.xml
+public/rss.xml
+public/robots.txt
+
+# Don't ignore these public assets
+!public/images/
+!public/fonts/
+!public/favicon.ico
+
+# Optional: Uncomment if using these tools
+# .netlify/
+# .vercel/
+# .next/

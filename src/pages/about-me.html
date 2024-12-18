@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Tech Blog</title>
-    <link rel="stylesheet" href="/styling/styles.css">
+    <link rel="stylesheet" href="/src/styles/styles.css">
     <script> // fuction to load HTML files
         function loadHTML(file, elementId) {
             fetch(file)
@@ -21,7 +21,7 @@
 
         
         <div class="img-card">
-            <img src="/images/eu.png" alt="me" class="img-about">
+            <img src="/public/images/profile/eu.png" alt="me" class="img-about">
             <div class="card p-about">
                 <h2>Hey there! I'm Junior 👨‍💻</h2>
                 <p>I'm an IT student passionate about programming, technology, and continuous learning. This blog is my digital playground where I explore various programming concepts, share my knowledge, and document my journey in the tech world.</p>
@@ -56,10 +56,10 @@
         </ul>
     </div>
     <div id="footer"></div>
-    <script src="/styling/script.js"></script>
+    <script src="/src/scripts/script.js"></script>
     <script> // load HTML files
-        loadHTML('/basic structure/menu.html', 'menu');
-        loadHTML('/basic structure/footer.html', 'footer');
+        loadHTML('/src/components/menu.html', 'menu');
+        loadHTML('/src/components/footer.html', 'footer');
     </script>
 </body>
 </html>
