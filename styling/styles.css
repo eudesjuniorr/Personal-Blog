@@ -238,6 +238,11 @@ footer {
     transition: none;
 }
 
+.when-created-about:hover {
+    transform: none;
+    transition: none;
+}
+
 /* -------------------------------------------- */
 
 /* Reservation space for Articles styling (if needed) */
