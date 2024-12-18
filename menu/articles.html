@@ -5,41 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Articles</title>
     <link rel="stylesheet" href="/styling/styles.css">
+    <script> // fuction to load HTML files
+        function loadHTML(file, elementId) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => document.getElementById(elementId).innerHTML = data)
+                .catch(err => console.error('Error loading file:', err));
+            }
+    </script>
 </head>
 <body>
-    <header class="site-header">
-        <div class="header-blur-background"></div>
-        <div class="header-content">
-            <div class="header-logo">
-                <a href="/" class="a-logo"><img src="/images/logo-without-background.png" alt="Website Logo" class="logo-image"></a>
+    <div id="menu"></div>
+    <div class="main-content">
+        <h1 id="first-title">Articles 📝</h1>
+        <div class="card article-preview">
+            <div class="article-header">
+                <img src="/api/placeholder/400/200" alt="Boolean Logics Article" class="article-image">
+                <h2>Boolean Logics for Beginners</h2>
             </div>
-            <nav class="header-menu">
-                <a href="maintenance.html">About me</a>
-                <a href="maintenance.html">Articles</a>
-            </nav>
-            <div class="hidden-menu">
-                <input type="checkbox" id="mobile-menu-toggle" class="dropdown-toggle">
-                <label for="mobile-menu-toggle" class="dropdown-label">Menu ☰</label>
-                <div class="dropdown-menu">
-                    <a href="/">Home</a>
-                    <a href="maintenance.html">About me</a>
-                    <a href="maintenance.html">Articles</a>
-                </div>
+            <p>Dive into the fundamental world of Boolean logic - the backbone of computer programming. Learn how true/false statements form the basis of computational thinking and explore practical examples that demystify this crucial concept.</p>
+            <div class="article-meta">
+                <span>🕒 5 min read</span>
+                <a href="boolean-logics.html" class="read-more">Read More →</a>
             </div>
         </div>
-    </header>
-    <div class="main-content">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod aliquid doloribus accusantium sunt quaerat molestiae dolore. Et voluptate itaque officiis, nesciunt, a autem numquam quis corporis enim provident, molestias in.</p>
+
+        <div class="card article-preview">
+            <div class="article-header">
+                <img src="/api/placeholder/400/200" alt="Sorting Algorithms Article" class="article-image">
+                <h2>Introduction to Sorting Algorithms</h2>
+            </div>
+            <p>Uncover the magic behind sorting algorithms and how computers efficiently organize data. From bubble sort to quicksort, learn the principles, implementations, and performance considerations of different sorting techniques.</p>
+            <div class="article-meta">
+                <span>🔜</span>
+                <a href="sorting-algorithms.html" class="read-more" onclick="return false;">Coming Soon...</a>
+            </div>
+        </div>
+
+        <div class="card article-preview">
+            <div class="article-header">
+                <img src="/api/placeholder/400/200" alt="Numbering Systems Article" class="article-image">
+                <h2>Numbering Systems: Binary, Decimal, Hexadecimal</h2>
+            </div>
+            <p>Explore the fascinating world of number representations in computing. Learn how computers understand and process numbers differently from humans, and master the art of converting between binary, decimal, and hexadecimal systems.</p>
+            <div class="article-meta">
+                <span>🔜</span>
+                <a href="numbering-systems.html" class="read-more" onclick="return false;">Coming Soon...</a>
+            </div>
+        </div>
+
+        <div class="card article-preview">
+            <div class="article-header">
+                <img src="/api/placeholder/400/200" alt="Data Structures Article" class="article-image">
+                <h2>Introduction to Data Structures: Arrays and Lists</h2>
+            </div>
+            <p>Embark on a journey through the foundational data structures that power modern programming. Explore the differences between arrays and lists, understand their memory management, performance characteristics, and learn practical use cases. Discover how these fundamental structures are the building blocks of complex algorithms and efficient coding.</p>
+            <div class="article-meta">
+                <span>🔜</span>
+                <a href="data-structures-arrays-lists.html" class="read-more" onclick="return false;">Coming soon...</a>
+            </div>
+        </div>
+
+        <div class="card article-preview">
+            <div class="article-header">
+                <img src="/api/placeholder/400/200" alt="Mathematics for Programming Article" class="article-image">
+                <h2>Mathematics for Programming: Fundamentals of Progressions</h2>
+            </div>
+            <p>Unlock the mathematical foundations that power algorithmic thinking. Dive deep into arithmetic and geometric progressions, exploring their properties, calculations, and real-world applications in programming. Learn how these mathematical concepts translate into code, helping you solve complex problems and optimize computational solutions.</p>
+            <div class="article-meta">
+                <span>🔜</span>
+                <a href="mathematics-progressions.html" class="read-more" onclick="return false;">Coming soon...</a>
+            </div>
+        </div>
     </div>
-    <footer>&copy; 2024 Jr. All rights reserved.</footer>
-    <!-- Scroll to top button -->
-    <a href="#" class="scroll-to-top">
-        <div class="arrow-up"></div>
-    </a>
-    <!-- Scroll to top button -->
-    <!-- ----- -->
-    <!-- JavaScript -->
+    <div id="footer"></div>
     <script src="/styling/script.js"></script>
-    <!-- JavaScript -->
+    <script> // load HTML files
+        loadHTML('/basic structure/menu.html', 'menu');
+        loadHTML('/basic structure/footer.html', 'footer');
+    </script>
 </body>
 </html>
