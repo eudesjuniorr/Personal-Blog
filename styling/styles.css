@@ -17,6 +17,7 @@
     --cor-destaque: #047af1;
     --fonte-principal: 'Inter', sans-serif;
     --transition: 0.3s ease;
+    --scale: 1.05;
 }
 
 body {
@@ -90,7 +91,7 @@ i {
 }
 
 .logo-image:hover {
-    transform: scale(1.05);
+    transform: var(--scale);
     transition: transform 0.3s ease;
 }
 
@@ -105,7 +106,7 @@ i {
 }
 
 .card:hover {
-    transform: scale(1.02);
+    transform: var(--scale);
 }
 
 .site-header {
@@ -230,7 +231,7 @@ footer {
 }
 
 .img-about:hover {
-    transform: scale(1.05);
+    transform: var(--scale);
 }
 
 .p-about:hover {
@@ -238,37 +239,41 @@ footer {
     transition: none;
 }
 
-
-@media screen and (max-width: 722px) {
-    .img-card {
-        flex-direction: column;
-        align-items: center;
-    }
-    .img-about {
-        margin-bottom: 20px;
-        width: 50%;
-        transition: transform 0.3s ease;
-    }
-    .img-about:hover {
-        transform: scale(1.05);
-    }
-    .p-about {
-        width: 100%;
-    }
-    
-}
-
 /* -------------------------------------------- */
 
 /* Reservation space for Articles styling (if needed) */
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+#first-title {
+    text-align: center;
+    width: 100%;
+    margin: 1.5rem 0;
+}
 
 .article-preview {
     display: flex;
     flex-direction: column;
     margin-bottom: 1.5rem;
-    /* margin-left: calc(50% - 35%); */
-    width: 100%; /* 70% */
-    transition: transform 0.3s ease;
+    width: 100%;
+    transition: flex-basis 0.3s;
+    flex-basis: calc(50% - 0.5rem);
+    margin-bottom: 1.5rem;
+    justify-content: space-between; /* This ensures equal spacing */
+    align-items: stretch; /* Stretch items to fill the container width */
+}
+
+.article-preview h2 {
+    font-size: 1.3rem;
+}
+
+.article-preview p {
+    font-size: 0.95rem;
 }
 
 .article-preview:hover {
@@ -277,6 +282,8 @@ footer {
 
 .article-header {
     margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .article-image {
@@ -291,7 +298,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1rem;
+    margin-top: auto;
     font-size: 0.9rem;
 }
 
@@ -303,6 +310,19 @@ footer {
 
 .read-more:hover {
     opacity: 0.7;
+}
+
+/* when the screen is smaller than 831px cards will turn into column (one in each line) */
+@media screen and (max-width: 830px) {
+    .article-preview {
+        flex-basis: 100%;
+    }
+    .article-preview h2 {
+        font-size: auto;
+    }
+    .article-preview p {
+        font-size: auto;
+    }
 }
 
 /* -------------------------------------------- */
@@ -361,6 +381,54 @@ footer {
 
     .dropdown-toggle:checked ~ .dropdown-menu {
         display: block;
+    }
+
+    .img-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-about {
+        margin-bottom: 20px;
+        width: 50%;
+        transition: transform 0.3s ease;
+    }
+
+    .img-about:hover {
+        transform: var(--scale);
+    }
+
+    .p-about {
+        width: 100%;
+    }
+
+    .article-preview {
+        flex-basis: 100%;
+        transition: flex-basis 0.3s ease-in-out;
+    }
+    .article-preview h2 {
+        font-size: auto;
+    }
+    .article-preview p {
+        font-size: auto;
+    }
+
+    .header-menu,
+    .hidden-menu,
+    .dropdown-toggle,
+    .dropdown-label,
+    .dropdown-menu {
+        transition: 
+            display 0.3s ease-in-out,
+            opacity 0.3s ease-in-out,
+            transform 0.3s ease-in-out,
+            visibility 0.3s ease-in-out;
+    }
+
+    .dropdown-menu a {
+        transition: 
+            background-color 0.3s ease,
+            color 0.3s ease;
     }
 }
 
