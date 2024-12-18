@@ -11,20 +11,10 @@ blog/
 │   ├── templates/  # Page templates
 │   ├── styles/     # CSS files
 │   └── pages/      # HTML pages
-├── content/        # Blog content
-│   └── posts/      # Blog articles
 ├── public/         # Static assets
 └── dist/          # Built files
 
 ```
-
-## 📝 Writing Content
-
-Articles are written in Markdown format and stored in `content/posts/`. Follow these conventions:
-
-- Place articles in year-based folders
-- Include proper frontmatter
-- Use descriptive filenames
 
 ## 🛠️ Tech Stack
 
