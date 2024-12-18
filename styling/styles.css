@@ -17,7 +17,6 @@
     --cor-destaque: #047af1;
     --fonte-principal: 'Inter', sans-serif;
     --transition: 0.3s ease;
-    --scale: 1.05;
 }
 
 body {
@@ -91,7 +90,7 @@ i {
 }
 
 .logo-image:hover {
-    transform: var(--scale);
+    transform: scale(1.05);
     transition: transform 0.3s ease;
 }
 
@@ -106,7 +105,7 @@ i {
 }
 
 .card:hover {
-    transform: var(--scale);
+    transform: scale(1.02);
 }
 
 .site-header {
@@ -231,7 +230,7 @@ footer {
 }
 
 .img-about:hover {
-    transform: var(--scale);
+    transform: scale(1.05);
 }
 
 .p-about:hover {
@@ -243,7 +242,7 @@ footer {
 
 /* Reservation space for Articles styling (if needed) */
 
-.main-content {
+.main-content-article {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -395,7 +394,7 @@ footer {
     }
 
     .img-about:hover {
-        transform: var(--scale);
+        transform: scale(1.05);
     }
 
     .p-about {
@@ -406,6 +405,7 @@ footer {
         flex-basis: 100%;
         transition: flex-basis 0.3s ease-in-out;
     }
+    
     .article-preview h2 {
         font-size: auto;
     }
