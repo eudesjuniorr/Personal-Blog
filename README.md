@@ -15,23 +15,7 @@ blog/
 │   └── posts/      # Blog articles
 ├── public/         # Static assets
 └── dist/          # Built files
-```
 
-## 🚀 Getting Started
-
-1. Clone the repository
-```bash
-git clone https://github.com/yourusername/Personal-Blog.git
-```
-
-2. Install dependencies
-```bash
-npm install
-```
-
-3. Start development server
-```bash
-npm run dev
 ```
 
 ## 📝 Writing Content
@@ -46,7 +30,6 @@ Articles are written in Markdown format and stored in `content/posts/`. Follow t
 
 - HTML5 & CSS3
 - JavaScript
-- Static Site Generator
 - Markdown for content
 
 ## 📜 License
