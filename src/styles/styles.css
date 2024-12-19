@@ -316,6 +316,110 @@ footer {
     opacity: 0.7;
 }
 
+/* Reservation space for project styling (if needed) */
+
+/* Project Grid Layout */
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+
+/* Project Card Styling */
+.project-card {
+    flex-basis: calc(50% - 0.75rem);
+    background: var(--cor-texto);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    color: var(--cor-fundo);
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-description {
+    margin: 1rem 0;
+    color: var(--cor-fundo);
+}
+
+/* Tech Stack Tags */
+.project-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tech-tag {
+    background: var(--cor-destaque);
+    color: var(--cor-texto);
+    padding: 0.25rem 0.75rem;
+    border-radius: 16px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Project Links */
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.project-link.live {
+    background: var(--cor-destaque);
+    color: var(--cor-texto);
+}
+
+.project-link.repo {
+    margin-left: auto;
+    border: 1px solid var(--cor-destaque);
+    color: var(--cor-destaque);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .project-card {
+        flex-basis: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+/* -------------------------------------------- */
+
 /* when the screen is smaller than 831px cards will turn into column (one in each line) */
 @media screen and (max-width: 830px) {
     .article-preview {
