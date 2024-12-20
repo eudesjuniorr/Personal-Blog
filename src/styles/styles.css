@@ -251,7 +251,6 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 1rem;
 }
 
 #first-title {
@@ -263,12 +262,10 @@ footer {
 .article-preview {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1.5rem;
     width: 100%;
     transition: flex-basis 0.3s;
     flex-basis: calc(50% - 0.5rem);
-    margin-bottom: 1.5rem;
-    justify-content: space-between; /* This ensures equal spacing */
+    justify-content: space-around; /* This ensures equal spacing */
     align-items: stretch; /* Stretch items to fill the container width */
 }
 
@@ -322,8 +319,7 @@ footer {
 .project-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 /* Project Card Styling */
