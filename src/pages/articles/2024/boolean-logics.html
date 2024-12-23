@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Tech Blog</title>
+    <title>Boolean Logic for Beginners</title>
     <link rel="stylesheet" href="/src/styles/styles.css">
     <script> // fuction to load HTML files
         function loadHTML(file, elementId) {
@@ -16,13 +16,140 @@
 </head>
 <body>
     <div id="menu"></div>
-    <div class="main-content">
-        <h1 id="first-title">Boolean Logics for Beginners</h1>
-        <p>Dive into the fundamental world of Boolean logic - the backbone of computer programming. Learn how true/false statements form the basis of computational thinking and explore practical examples that demystify this crucial concept.</p>
-    </div>
+        <article class="main-content">
+            <header>
+                <h1 id="first-title">Lógica Booleana para Iniciantes</h1>
+                <div>
+                    <p><strong>Autor:</strong> Eudes Jr.</p>
+                    <p><strong>Data:</strong> 2024-01-01</p>
+                    <p><strong>Tags:</strong> programação, lógica booleana, fundamentos.</p>
+                </div>
+            </header>
+            <hr>
+            <h2>Introdução</h2>
+
+            <h3>O que é lógica booleana</h3>
+
+            <p>A lógica booleana é um ramo da matemática (álgebra) que é representada por dois valores: verdadeiro (<strong>TRUE</strong>) e falso (<strong>FALSE</strong>). Esses valores são usados para representar o resultado de operações lógicas, como a negação, a conjunção e a disjunção. Portanto, ao invés de trabalhar com operadores aritméticos, como: soma, subtração, multiplicação e divisão. A lógica booleana trabalha com operadores lógicos, como: <strong>AND</strong>, <strong>OR</strong> e <strong>NOT</strong>.</p>
+            <h3>Por que é importante na programação</h3>
+            <p>É um conceito fundamental na programação, pois permite que os programadores tomem decisões com base em condições lógicas. Por exemplo, um programador pode usar a lógica booleana para verificar se um usuário tem permissão para acessar um recurso, se um formulário foi preenchido corretamente ou se um jogo foi vencido. Além disso, a lógica booleana é amplamente utilizada em linguagens de programação para controlar o fluxo de execução de um programa. Por exemplo, um programador pode usar uma instrução condicional (if) para executar um bloco de código apenas se uma condição lógica for verdadeira ou falsa. Enquanto podem haver infinitas possibilidades de valores numéricos, a lógica booleana se limita a apenas dois valores (TRUE ou FALSE), o que torna mais fácil para os programadores lidarem com condições lógicas simples e complexas.</p>
+            <h3>Como este artigo vai ajudar você</h3>
+            <p>Este artigo é um guia para iniciantes sobre lógica booleana. Ele explica os conceitos básicos da lógica booleana, como os valores booleanos, os operadores básicos (AND, OR e NOT) e exemplos práticos de como usar a lógica booleana na programação. Além disso, o artigo fornece dicas e boas práticas para trabalhar com lógica booleana e sugestões de casos de uso comuns.</p>
+            <hr>
+            <h2>Fundamentos da Lógica Booleana</h2>
+
+            <h3>Valores Booleanos</h3>
+
+            <ul>
+                <li>True (Verdadeiro)</li>
+                <li>False (Falso)</li>
+            </ul>
+
+            <h3>Origem histórica (George Boole)</h3>
+
+            <p>A lógica booleana recebeu esse nome em homenagem ao matemático inglês George Boole (1815-1864). Em 1854, ele publicou um trabalho revolucionário chamado "An Investigation of the Laws of Thought", onde apresentou um sistema algébrico para representar operações lógicas. Boole desenvolveu uma forma de representar declarações lógicas usando apenas dois valores (verdadeiro e falso) e mostrou como essas declarações podiam ser manipuladas usando regras algébricas. Este trabalho fundamental mais tarde se tornaria essencial para o desenvolvimento da computação moderna e da eletrônica digital.</p>
+
+            <h3>Operadores Básicos</h3>
+
+            <ul>
+                <li>AND (E)</li>
+                <li>OR (OU)</li>
+                <li>NOT (NÃO)</li>
+            </ul>
+            <hr>
+            <h2>Como a lógica booleana funciona?</h2>
+
+            <p>A lógica booleana funciona comparando dois valores booleanos e retornando um novo valor booleano com base em um operador lógico. Basicamente analisa a relaçao entre duas coisas, como por exemplo, se um usuário tem permissão para acessar um recurso, se um formulário foi preenchido corretamente ou se um jogo foi vencido.</p>
+
+            <p>
+                Vamos ver um exemplo prático com operações matemáticas:
+
+                <div class="math-block">6 + 6 = 12 (Verdadeiro)</div>
+
+                Acima temos uma operacao matematica em duas partes 6 + 6 e 12. A operação é verdadeira, você concorda? Pois 6 + 6 é igual a 12. Entao o resultado booleano é TRUE. A combinação das duas partes 2 + 2 e 4, juntamente com a relação (= igual a), é chamada de expressão booleana.
+
+                Vamos pegar outro exemplo, agora com uma expressão booleana que resulta no valor falso:
+
+                <div class="math-block">6 + 6 = 13 (Falso)</div>
+
+                Agora, a expressão <span class="code-inline">6 + 6 = 13</span> é falsa, pois <span class="code-inline">6 + 6</span> não é igual a <span class="code-inline">13</span>. Portanto, o resultado booleano é <strong>FALSE</strong>.
+
+                Abaixo uma tabela com 5 expressões booleanas e seus respectivos resultados:
+            </p>
+            <table class="blog-table">
+                <tr>
+                    <th>Boolean Expression</th>
+                    <th>Result</th>
+                </tr>
+                <tr>
+                    <td>6 + 6 = 12</td>
+                    <td>TRUE</td>   
+                </tr>
+                <tr>
+                    <td>6 + 6 = 13</td>
+                    <td>FALSE</td>
+                </tr>
+                <tr>
+                    <td>10 > 5</td>
+                    <td>TRUE</td>
+                </tr>
+                <tr>
+                    <td>5 < 3</td>
+                    <td>FALSE</td>
+                </tr>
+                <tr>
+                    <td>4 == 4</td>
+                    <td>TRUE</td>
+                </tr>
+            </table>
+            <hr>
+            <h2>Criando expressões booleanas</h2>
+            <p>Tenha em mente que a lógica booleana apenas funciona quando uma expressão pode ser <strong>TRUE</strong> ou <strong>FALSE</strong>. Por exemplo, a expressão <span class="code-inline">6 + 6 = 12</span> é uma expressão booleana, pois pode ser avaliada como verdadeira ou falsa. No entanto, a expressão <span class="code-inline">"Olá, mundo!"</span> não é uma expressão booleana, pois não pode ser avaliada como verdadeira ou falsa. Bem como a expressão <span class="code-inline">5 + 3</span>, pois não temos um operador de comparação entre eles. Para <span class="code-inline">5 + 3</span> ser uma expressão booleana, precisamos adicionar um operador de comparação ou relação, como por exemplo, <span class="code-inline">5 + 3 = 8</span>.</p>
+
+            <h3>Dentro da programação</h3>
+
+            <p>
+                Nós podemos criar expressões booleanas com todos os tipos de dados, incluindo variáveis. Por exemplo, imagine duas variáveis (x e y) que armazenam números inteiros. Podemos criar uma expressão booleana que compara essas variáveis e retorna TRUE ou FALSE com base em uma condição lógica. <br><br>
+
+                Por exemplo:
+
+    <pre class="code-block">
+        x = 5
+        y = 10
+    </pre>
+                
+                Agora, podemos criar expressões booleanas dentro do código para verificar a relação entre x e y:<br><br>
+
+    <pre class="code-block">
+        x < y (TRUE)
+        x > y (FALSE)
+        x == y (FALSE)
+        y == 10 (TRUE)
+    </pre>
+                
+                Como eu havia citado mais acima, podemos utilizar a lógica booleana para comparar strings, objetos, arrays e outros tipos de dados além de números.<br><br>
+                
+                Vamos ver alguns exemplos mais específicos, a começar por exemplos com o operador AND.
+            </p>
+            <hr>
+            <h2>Exemplos teóricos, operador AND.</h2> 
+            
+            <p>
+                Na programação o operador booleano <strong>AND</strong> é representado por <strong>&&</strong> (em JavaScript e algumas outras linguagens). Ele retorna <strong>TRUE</strong> se ambos os operandos forem verdadeiros, caso contrário, retorna <strong>FALSE</strong>.<br><br>
+
+                Vamos imaginar uma estrutura na qual temos duas variáveis as quais precisam ser verdadeiras para que uma determinada ação seja executada ou um resultado seja retornado.<br><br>
+                
+                <i>continua...</i><!-- continue -->
+            </p> <!-- continue -->
+
+            <h2>Referências</h2>
+            <li><a href="https://pt.wikipedia.org/wiki/%C3%81lgebra_booleana" style="color: var(--cor-destaque);">Wikipedia - Lógica Booleana</a></li>
+            <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators" style="color: var(--cor-destaque);">MDN Web Docs - Operadores Lógicos</a></li>
+            <li><a href="https://pt.khanacademy.org/computing/computer-science/logic-gates" style="color: var(--cor-destaque);">Khan Academy - Lógica Booleana</a></li>
+        </article>
     <div id="footer"></div>
     <script src="/src/scripts/script.js"></script>
-    <script> // load HTML files
+    <script>
         loadHTML('/src/components/menu.html', 'menu');
         loadHTML('/src/components/footer.html', 'footer');
     </script>
