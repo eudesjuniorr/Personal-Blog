@@ -263,10 +263,14 @@ footer {
     display: flex;
     flex-direction: column;
     width: 100%;
-    transition: flex-basis 0.3s;
+    transition: transform 0.3s ease;
     flex-basis: calc(50% - 0.5rem);
     justify-content: space-around; /* This ensures equal spacing */
     align-items: stretch; /* Stretch items to fill the container width */
+}
+
+.article-preview:hover {
+    transform: scale(1.02);
 }
 
 .article-preview h2 {
@@ -275,10 +279,6 @@ footer {
 
 .article-preview p {
     font-size: 0.95rem;
-}
-
-.article-preview:hover {
-    transform: scale(1.02);
 }
 
 .article-header {
@@ -363,7 +363,7 @@ footer {
     color: var(--cor-fundo);
 }
 
-/* Tech Stack Tags */
+/* Tech Stack Tags. Like: api, programming language */
 .project-tech-stack {
     display: flex;
     flex-wrap: wrap;
@@ -412,6 +412,83 @@ footer {
         flex-basis: 100%;
         margin-bottom: 1rem;
     }
+}
+
+/* -------------------------------------------- */
+
+/* Styling code block, code inline and math block */
+
+/* Code Block Styling */
+.code-block {
+    background-color: #1a1a1a; /* Slightly lighter than the background */
+    border-left: 3px solid var(--cor-destaque);
+    border-radius: 4px;
+    padding: 1rem 0 0 0;
+    margin: 0 0 1.5rem 0;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.95rem;
+    overflow-x: auto;
+    position: relative;
+}
+
+/* For inline code */
+.code-inline {
+    background-color: #1a1a1a;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9em;
+}
+
+/* For mathematical operations */
+.math-block {
+    background-color: #1a1a1a;
+    border-left: 3px solid var(--cor-destaque);
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    font-family: 'Times New Roman', serif; /* Better for mathematical notation */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    overflow-x: auto;
+}
+
+/* Add responsive adjustments */
+@media screen and (max-width: 768px) {
+    .code-block,
+    .math-block {
+        font-size: 0.9rem;
+    }
+    
+    .code-inline {
+        font-size: 0.85em;
+    }
+}
+
+/* ...  ... */
+
+/* Table Styling */
+.blog-table {
+    width: 50%;
+    border-collapse: collapse;
+    font-size: smaller;
+    margin: 1.5rem 0;
+    background-color: #1a1a1a;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.blog-table th,
+.blog-table td {
+    padding: 0.8rem 1rem;
+    text-align: left;
+    border: 1px solid #333;
+}
+
+.blog-table th {
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto);
+    font-weight: 500;
 }
 
 /* -------------------------------------------- */
