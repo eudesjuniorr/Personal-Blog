@@ -1,106 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-    <link rel="stylesheet" href="/src/styles/styles.css">
-    <script> // fuction to load HTML files
-        function loadHTML(file, elementId) {
-            fetch(file)
-                .then(response => response.text())
-                .then(data => document.getElementById(elementId).innerHTML = data)
-                .catch(err => console.error('Error loading file:', err));
+<html>
+    <head>
+        <title>Page Maintenance</title>
+        <meta charset="utf-8" />
+        <meta name="robots" content="noindex" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            body {
+                text-align: center;
+                padding: 20px;
+                font: 20px 'Inter', sans-serif;
+                color: #0a0a0a;
+                background-color: #e8e8e8;
             }
-    </script>
-</head>
-<body>
-    <div id="menu"></div>
-    <div class="main-content">
-        <h1 id="first-title">Projects</h1>
-        <div class="project-grid">
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="/api/placeholder/400/200" alt="Project Name" class="card-image">
-                </div>
-                <div class="project-content">
-                    <h2>Weather Dashboard</h2>
-                    <p class="project-description">A real-time weather dashboard that displays current weather conditions and forecasts for multiple cities. Features interactive maps and detailed meteorological data.</p>
-                    <div class="project-tech-stack">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">OpenWeather API</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link live">Live Demo →</a>
-                        <a href="#" class="project-link repo">Repository →</a>
-                    </div>
-                </div>
+            @media (min-width: 768px) {
+                body {
+                    padding-top: 150px;
+                }
+            }
+            h1 {
+                font-size: 50px;
+            }
+            article {
+                display: block;
+                text-align: left;
+                max-width: 650px;
+                margin: 0 auto;
+            }
+            a {
+                color: #047af1;
+                text-decoration: none;
+            }
+            a:hover {
+                color: #e8e8e8;
+                text-decoration: none;
+            }
+            @media (prefers-color-scheme: dark) {
+                body {
+                    color: #e8e8e8;
+                    background-color: #0a0a0a;
+                }
+                a {
+                    color: #047af1;
+                }
+                a:hover {
+                    color: #e8e8e8;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <article>
+            <h1>Under Construction ⚠️🛠️</h1>
+            <div>
+                <p>
+                    Sorry for the inconvenience! I’m doing some work on this page, but it’ll be ready soon!
+                </p>
+                <p>&mdash; Jr.</p>
+                <span><a class="card" href="/">Return to home page</a></span>
             </div>
-            
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="/api/placeholder/400/200" alt="Project Name" class="card-image">
-                </div>
-                <div class="project-content">
-                    <h2>Weather Dashboard</h2>
-                    <p class="project-description">A real-time weather dashboard that displays current weather conditions and forecasts for multiple cities. Features interactive maps and detailed meteorological data.</p>
-                    <div class="project-tech-stack">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">OpenWeather API</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link live">Live Demo →</a>
-                        <a href="#" class="project-link repo">Repository →</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="/api/placeholder/400/200" alt="Project Name" class="card-image">
-                </div>
-                <div class="project-content">
-                    <h2>Weather Dashboard</h2>
-                    <p class="project-description">A real-time weather dashboard that displays current weather conditions and forecasts for multiple cities. Features interactive maps and detailed meteorological data.</p>
-                    <div class="project-tech-stack">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">OpenWeather API</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link live">Live Demo →</a>
-                        <a href="#" class="project-link repo">Repository →</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="/api/placeholder/400/200" alt="Project Name" class="card-image">
-                </div>
-                <div class="project-content">
-                    <h2>Weather Dashboard</h2>
-                    <p class="project-description">A real-time weather dashboard that displays current weather conditions and forecasts for multiple cities. Features interactive maps and detailed meteorological data.</p>
-                    <div class="project-tech-stack">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">OpenWeather API</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link live">Live Demo →</a>
-                        <a href="#" class="project-link repo">Repository →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="footer"></div>
-    <script src="/src/scripts/script.js"></script>
-    <script> // load HTML files
-        loadHTML('/src/components/menu.html', 'menu');
-        loadHTML('/src/components/footer.html', 'footer');
-    </script>
-</body>
+        </article>
+    </body>
 </html>

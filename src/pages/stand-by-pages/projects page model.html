@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="/src/styles/styles.css">
+    <script> // fuction to load HTML files
+        function loadHTML(file, elementId) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => document.getElementById(elementId).innerHTML = data)
+                .catch(err => console.error('Error loading file:', err));
+            }
+    </script>
+</head>
+<body>
+    <div id="menu"></div>
+    <div class="main-content">
+        <h1 id="first-title">Projects</h1>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/api/placeholder/400/200" alt="Project Name" class="card-image">
+                </div>
+                <div class="project-content">
+                    <h2>Weather Dashboard</h2>
+                    <p class="project-description">A real-time weather dashboard that displays current weather conditions and forecasts for multiple cities. Features interactive maps and detailed meteorological data.</p>
+                    <div class="project-tech-stack">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">OpenWeather API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link live">Live Demo →</a>
+                        <a href="#" class="project-link repo">Repository →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/api/placeholder/400/200" alt="Project Name" class="card-image">
+                </div>
+                <div class="project-content">
+                    <h2>Weather Dashboard</h2>
+                    <p class="project-description">A real-time weather dashboard that displays current weather conditions and forecasts for multiple cities. Features interactive maps and detailed meteorological data.</p>
+                    <div class="project-tech-stack">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">OpenWeather API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link live">Live Demo →</a>
+                        <a href="#" class="project-link repo">Repository →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/api/placeholder/400/200" alt="Project Name" class="card-image">
+                </div>
+                <div class="project-content">
+                    <h2>Weather Dashboard</h2>
+                    <p class="project-description">A real-time weather dashboard that displays current weather conditions and forecasts for multiple cities. Features interactive maps and detailed meteorological data.</p>
+                    <div class="project-tech-stack">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">OpenWeather API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link live">Live Demo →</a>
+                        <a href="#" class="project-link repo">Repository →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/api/placeholder/400/200" alt="Project Name" class="card-image">
+                </div>
+                <div class="project-content">
+                    <h2>Weather Dashboard</h2>
+                    <p class="project-description">A real-time weather dashboard that displays current weather conditions and forecasts for multiple cities. Features interactive maps and detailed meteorological data.</p>
+                    <div class="project-tech-stack">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">OpenWeather API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link live">Live Demo →</a>
+                        <a href="#" class="project-link repo">Repository →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script src="/src/scripts/script.js"></script>
+    <script> // load HTML files
+        loadHTML('/src/components/menu.html', 'menu');
+        loadHTML('/src/components/footer.html', 'footer');
+    </script>
+</body>
+</html>
