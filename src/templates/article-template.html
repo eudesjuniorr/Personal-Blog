@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Template</title>
+    <link rel="stylesheet" href="/src/styles/styles.css">
+    <script> // fuction to load HTML files
+        function loadHTML(file, elementId) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => document.getElementById(elementId).innerHTML = data)
+                .catch(err => console.error('Error loading file:', err));
+            }
+    </script>
+</head>
+<body>
+    <div id="menu"></div>
+        <article class="main-content">
+            <header>
+                <h1 id="first-title">Lógica Booleana para Iniciantes</h1>
+                <div class="article-info">
+                    <p><strong>Autor:</strong> Jr.</p>
+                    <p><strong>Data:</strong> 12-23-2024</p>
+                    <p><strong>Tags:</strong> programação, lógica booleana, fundamentos.</p>
+                </div>
+            </header>
+            <hr>
+            <h2>Referências</h2>
+            <a href="https://pt.wikipedia.org/wiki/%C3%81lgebra_booleana" style="color: var(--cor-destaque);">Wikipedia - Lógica Booleana</a><br>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators" style="color: var(--cor-destaque);">MDN Web Docs - Operadores Lógicos</a>
+        </article>
+    <div id="footer"></div>
+    <script src="/src/scripts/script.js"></script>
+    <script>
+        loadHTML('/src/components/menu.html', 'menu');
+        loadHTML('/src/components/footer.html', 'footer');
+    </script>
+</body>
+</html>

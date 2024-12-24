@@ -65,7 +65,7 @@ hr { /* Horizontal Line */
 }
 
 ul {
-    padding-left: 5vw;
+    margin-left: 1vw;
     margin-top: -15px;
     margin-bottom: 10px;
 }
@@ -493,6 +493,42 @@ footer {
 
 /* -------------------------------------------- */
 
+/* Article info */
+
+.article-info {
+    font-size: 0.9rem;
+}
+
+.article-info p {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.article-info strong {
+    color: var(--cor-destaque);
+    min-width: 60px;
+}
+
+.article-info .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.article-info .tag {
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto);
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    transition: opacity 0.3s ease;
+}
+
+/* -------------------------------------------- */
+
 /* when the screen is smaller than 831px cards will turn into column (one in each line) */
 @media screen and (max-width: 830px) {
     .article-preview {
@@ -611,6 +647,14 @@ footer {
         transition: 
             background-color 0.3s ease,
             color 0.3s ease;
+    }
+    .blog-table {
+        width: 100%;
+    }
+
+    .article-info {
+        padding: 1rem;
+        font-size: 0.85rem;
     }
 }
 

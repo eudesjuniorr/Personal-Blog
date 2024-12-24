@@ -19,9 +19,9 @@
         <article class="main-content">
             <header>
                 <h1 id="first-title">Lógica Booleana para Iniciantes</h1>
-                <div>
-                    <p><strong>Autor:</strong> Eudes Jr.</p>
-                    <p><strong>Data:</strong> 2024-01-01</p>
+                <div class="article-info">
+                    <p><strong>Autor:</strong> Jr.</p>
+                    <p><strong>Data:</strong> 12-23-2024</p>
                     <p><strong>Tags:</strong> programação, lógica booleana, fundamentos.</p>
                 </div>
             </header>
@@ -132,20 +132,184 @@
                 Vamos ver alguns exemplos mais específicos, a começar por exemplos com o operador AND.
             </p>
             <hr>
-            <h2>Exemplos teóricos, operador AND.</h2> 
+            <h2>Exemplos teóricos</h2> 
+
+            <h3>Operador <strong>AND</strong></h3>
             
             <p>
                 Na programação o operador booleano <strong>AND</strong> é representado por <strong>&&</strong> (em JavaScript e algumas outras linguagens). Ele retorna <strong>TRUE</strong> se ambos os operandos forem verdadeiros, caso contrário, retorna <strong>FALSE</strong>.<br><br>
 
                 Vamos imaginar uma estrutura na qual temos duas variáveis as quais precisam ser verdadeiras para que uma determinada ação seja executada ou um resultado seja retornado.<br><br>
-                
-                <i>continua...</i><!-- continue -->
-            </p> <!-- continue -->
 
+                Imagine um sistema para uma confeitaria, onde os dois valores de sabores precisam ser verdadeiros para que o resultado retornado seja Sim (TRUE).<br><br>
+                
+                As variáveis: Sabor 1 = Prestígio e Sabor 2 = Brigadeiro.
+
+                <table class="blog-table">
+                    <tr>
+                        <th>Sabor 1</th>
+                        <th>Sabor 2</th>
+                        <th>Resultado</th>
+                    </tr>
+                    <tr>
+                        <td>Prestígio</td>
+                        <td>Brigadeiro</td>
+                        <td>Sim (TRUE)</td> 
+                    </tr>
+                    <tr>
+                        <td>Prestígio</td>
+                        <td>Morango</td>
+                        <td>Não (FALSE)</td>
+                    </tr>
+                    <tr>
+                        <td>Morango</td>
+                        <td>Brigadeiro</td>
+                        <td>Não (FALSE)</td>
+                    </tr>
+                    <tr>
+                        <td>Morango</td>
+                        <td>Morango</td>
+                        <td>Não (FALSE)</td>
+                    </tr>
+                </table>
+
+                Nesse caso, o operador AND é usado para verificar se ambos os sabores são verdadeiros. Se ambos os sabores forem verdadeiros, o resultado será Sim (TRUE), caso contrário, será Não (FALSE).
+            </p>
+
+            <h3>Operador <strong>OR</strong></h3>
+
+            <p>
+                O operador OR é representado por || (em JavaScript e algumas outras linguagens). Ele retorna TRUE se pelo menos um dos operandos for verdadeiro, caso contrário, retorna FALSE.<br><br>
+
+                Por exemplo, imagine um sistema de login onde o usuário pode fazer login com seu e-mail ou nome de usuário. O sistema verifica se o e-mail ou o nome de usuário é válido para permitir o login.
+
+                <table class="blog-table">
+                    <tr>
+                        <th>E-mail</th>
+                        <th>Nome de Usuário</th>
+                        <th>Resultado</th>
+                    </tr>
+                    <tr>
+                        <td>válido</td>
+                        <td>inválido</td>
+                        <td>Sim (TRUE)</td> 
+                    </tr>
+                    <tr>
+                        <td>inválido</td>
+                        <td>válido</td>
+                        <td>Sim (TRUE)</td>
+                    </tr>
+                    <tr>
+                        <td>válido</td>
+                        <td>válido</td>
+                        <td>Sim (TRUE)</td>
+                    </tr>
+                    <tr>
+                        <td>inválido</td>
+                        <td>inválido</td>
+                        <td>Não (FALSE)</td>
+                    </tr>
+                </table>
+
+                Nesse caso, o operador OR é usado para verificar se pelo menos um dos operandos é verdadeiro. Se o e-mail ou o nome de usuário for válido, o resultado será Sim (TRUE), caso contrário, será Não (FALSE).
+            </p>
+
+            <h3>Operador <strong>NOT</strong></h3>
+
+            <p>
+                O operador NOT é representado por ! (em JavaScript e algumas outras linguagens). Ele inverte o valor de um operando, ou seja, se o operando for verdadeiro, ele retorna falso e vice-versa.<br><br>
+
+                Por exemplo, imagine um sistema de verificação de idade para um evento. O sistema verifica se o usuário tem menos de 18 anos para permitir a entrada no evento.
+
+                <table class="blog-table">
+                    <tr>
+                        <th>Idade</th>
+                        <th>Resultado</th>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>Sim (TRUE)</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>Não (FALSE)</td>
+                    </tr>
+                </table>
+
+                Nesse caso, o operador NOT é usado para inverter o valor da idade. Se a idade for menor que 18, o resultado será Sim (TRUE), caso contrário, será Não (FALSE).
+            </p>
+            <hr>
+            <h2>Exemplos Práticos</h2>
+
+            <h3>Operador <strong>AND</strong></h3>
+
+            <p>
+                O operador AND (&&) retorna verdadeiro (TRUE) se ambos os operandos forem verdadeiros, caso contrário, retorna falso (FALSE). Veja o exemplo abaixo escrito em JavaScript:
+            </p>
+
+    <pre class="code-block">
+        javascript
+            let temIngresso = true;
+            let temIdadePermitida = true;
+
+            if (temIngresso && temIdadePermitida) {
+                console.log("Pode entrar no evento!");
+            }
+    </pre>
+            <h3>Operador <strong>OR</strong></h3>
+            <P>
+                Em contrapartida, o operador OR (||) retorna verdadeiro (TRUE) se pelo menos um dos operandos for verdadeiro, caso contrário, retorna falso (FALSE):
+            </P>
+
+    <pre class="code-block">
+        javascript
+            let temCartaoCredito = false;
+            let temDinheiro = true;
+            
+            if (temCartaoCredito || temDinheiro) {
+                console.log("Pode realizar a compra!");
+            }
+    </pre>
+    <hr>
+            <h2>Casos de Uso Comuns</h2>
+            
+            <p>
+                Alguns exemplos de casos de uso comuns para lógica booleana na programação incluem:<br><br>
+
+                - Validação de formulários<br>
+                    por exemplo, verificar se um campo de formulário foi preenchido corretamente antes de enviar os dados para o servidor.<br><br>
+                - Controle de acesso<br>
+                    por exemplo, verificar se um usuário tem permissão para acessar um recurso ou realizar uma ação específica.<br><br>
+                - Lógica de jogos<br>
+                    por exemplo, determinar se um jogador venceu ou perdeu um jogo com base em certas condições.<br>
+                - Tomada de decisões em sistemas<br><br>
+                    por exemplo, decidir se um sistema deve executar uma determinada tarefa com base em condições lógicas.
+            </p>
+            <hr>
+            <h2>Dicas e Boas Práticas</h2>
+            <p>
+                Existem várias dicas e boas práticas que você pode seguir ao trabalhar com lógica booleana na programação, incluindo:<br><br>
+                <ul>
+                    <li>Nomeando as variáveis booleanas;</li>
+                    <li>Usando parênteses para evitar ambiguidades;</li>
+                    <li>Evitando negações complexas;</li>
+                    <li>Simplificando expressões booleanas.</li>
+                </ul>
+            </p>
+            <hr>
+            <h2>Conclusão</h2>
+            <p>
+                - Resumo dos conceitos<br>
+                    De modo geral, a lógica booleana é um conceito fundamental na programação que permite que os programadores tomem decisões com base em condições lógicas. É de extrema importância entender os valores booleanos, os operadores básicos (AND, OR e NOT) e como criar expressões booleanas em seu código.<br><br>
+                - Próximos passos<br>
+                    Se você é um iniciante em programação, recomendo praticar a criação de expressões booleanas simples e experimentar diferentes operadores lógicos. Além disso, você pode explorar a lógica booleana em linguagens de programação específicas e aprender como ela é usada em situações do mundo real.<br><br>
+                - Recursos adicionais <br>
+                    Se deseja aprender mais sobre lógica booleana, recomendo explorar tutoriais e cursos online sobre o assunto. Além disso, você pode praticar a criação de expressões booleanas em seu próprio código e experimentar diferentes cenários para aprimorar suas habilidades.
+            </p>
+            <hr>
             <h2>Referências</h2>
-            <li><a href="https://pt.wikipedia.org/wiki/%C3%81lgebra_booleana" style="color: var(--cor-destaque);">Wikipedia - Lógica Booleana</a></li>
-            <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators" style="color: var(--cor-destaque);">MDN Web Docs - Operadores Lógicos</a></li>
-            <li><a href="https://pt.khanacademy.org/computing/computer-science/logic-gates" style="color: var(--cor-destaque);">Khan Academy - Lógica Booleana</a></li>
+            <a href="https://pt.wikipedia.org/wiki/%C3%81lgebra_booleana" style="color: var(--cor-destaque);">Wikipedia - Lógica Booleana</a><br>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators" style="color: var(--cor-destaque);">MDN Web Docs - Operadores Lógicos</a>
         </article>
     <div id="footer"></div>
     <script src="/src/scripts/script.js"></script>
