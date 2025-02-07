@@ -13,6 +13,7 @@ A personal blog focused on sharing knowledge about programming, technology, and 
 
 ## 📁 Project Structure
 
+```
 blog/
 ├── src/            # Source code
 │   ├── components/ # Reusable components
@@ -21,6 +22,8 @@ blog/
 │   └── pages/      # HTML pages
 ├── public/         # Static assets
 └── dist/          # Built files
+
+```
 
 ## 🛠️ Tech Stack
 
