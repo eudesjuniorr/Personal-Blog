@@ -1,4 +1,3 @@
-```markdown
 # Personal Tech Blog
 
 A personal blog focused on sharing knowledge about programming, technology, and software development.
@@ -14,7 +13,6 @@ A personal blog focused on sharing knowledge about programming, technology, and 
 
 ## 📁 Project Structure
 
-```
 blog/
 ├── src/            # Source code
 │   ├── components/ # Reusable components
@@ -23,7 +21,6 @@ blog/
 │   └── pages/      # HTML pages
 ├── public/         # Static assets
 └── dist/          # Built files
-```
 
 ## 🛠️ Tech Stack
 
@@ -68,4 +65,3 @@ This project is licensed - see the [LICENSE.md](LICENSE.md) file for details.
 - GitHub: [@eudesjuniorr](https://github.com/eudesjuniorr)
 - LinkedIn: N/A
 - E-mail: [Eudes Jr.](eudes.jr@icloud.com)
-```
